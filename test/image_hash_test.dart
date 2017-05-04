@@ -26,6 +26,10 @@ void main() {
       expect(hash, isNotNull);
       expect(hash.toString(), "c0c0c2faf8c0e0f0");
     });
+    test(".parse()", () {
+      final ImageHash hash2 = new ImageHash.parse("1f718f73b8773c0ffd8ffcfef0fcc030803080008000200003a383ffbfff0fff");
+      expect(hash2.toString(), "1f718f73b8773c0ffd8ffcfef0fcc030803080008000200003a383ffbfff0fff");
+    });
   });
 
   group('Compare images', () {

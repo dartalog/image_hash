@@ -11,7 +11,21 @@ import 'package:image/image.dart';
 
 class ImageHash  {
   final List<int> _hash;
+
+  int get length => _hash.length;
+
   ImageHash(this._hash);
+
+  ImageHash.parse(String hash): _hash= <int>[] {
+    for(int i = 0; i <hash.length; i += 2) {
+      String hexDigit  = hash.substring(i, i+2);
+      int digit = int.parse(hexDigit, radix: 16);
+      String binaryString = digit.toRadixString(2).padLeft(8,'0');
+      for(int j = 0; j < binaryString.length; j++) {
+        _hash.add(int.parse(binaryString.substring(j,j+1)));
+      }
+    }
+  }
 
   ImageHash.forImage(Image sourceImage, {int size: 8}): _hash= <int>[] {
     if(((size*size)%4)!=0)
