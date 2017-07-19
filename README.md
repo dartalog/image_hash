@@ -1,6 +1,6 @@
-# phash
+# image_hash
 
-A library for Dart developers. It is awesome.
+Provides functions for calculating a so-called "visual hash" of an image. The hash can be compared against the hash of another image to determine if the two images are similar.
 
 ## Usage
 
