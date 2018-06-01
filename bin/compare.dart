@@ -1,8 +1,6 @@
-import 'dart:convert';
 import 'dart:async';
 import 'dart:io';
-import 'package:args/args.dart';
-import 'package:logging/logging.dart';
+
 import 'package:image/image.dart';
 import 'package:image_hash/image_hash.dart';
 

@@ -6,7 +6,6 @@
 /// More dartdocs go here.
 library phash;
 
-import 'dart:convert';
 import 'package:image/image.dart';
 
 class ImageHash  {
